@@ -5,10 +5,10 @@ export const useStyles = createUseStyles({
   header: { border: "solid 1px" },
 });
 
-export function Sidebar(props) {
+export function Header() {
   const classes = useStyles();
 
   return <div className={classes.header}> Header</div>;
 }
 
-export default Sidebar;
+export default Header;

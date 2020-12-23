@@ -8,7 +8,7 @@ export const useStyles = createUseStyles({
 export function Sidebar(props) {
   const classes = useStyles();
 
-  return <div className={classes.sidebar}>TEST</div>;
+  return <div className={classes.sidebar}>Sidebar</div>;
 }
 
 export default Sidebar;
