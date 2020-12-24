@@ -1,5 +1,7 @@
 import Header from "./presentational/header";
 import Sidebar from "./presentational/sidebar";
+import Body from "./presentational/body";
+
 import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
@@ -10,6 +12,11 @@ export const useStyles = createUseStyles({
     border: "solid 1px red",
     margin: "-8px",
   },
+  container: {
+    display: "flex",
+    flexDirection: "row",
+    flexGrow: "1",
+  },
 });
 
 export default function Home() {
@@ -18,7 +25,10 @@ export default function Home() {
   return (
     <div className={classes.home}>
       <Header></Header>
-      <Sidebar></Sidebar>
+      <div className={classes.container}>
+        <Sidebar></Sidebar>
+        <Body></Body>
+      </div>
     </div>
   );
 }
