@@ -3,6 +3,7 @@ import Sidebar from "./presentational/sidebar";
 import Body from "./presentational/body";
 
 import { createUseStyles } from "react-jss";
+import Link from "next/link";
 
 export const useStyles = createUseStyles({
   home: {
