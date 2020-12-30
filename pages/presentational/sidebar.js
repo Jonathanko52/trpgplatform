@@ -19,12 +19,12 @@ export function Sidebar(props) {
         </li>
         <li>
           <Link href="/about">
-            <a>About Us</a>
+            <a>Character Sheet</a>
           </Link>
         </li>
         <li>
           <Link href="/blog/hello-world">
-            <a>Blog Post</a>
+            <a>Map</a>
           </Link>
         </li>
       </ul>
