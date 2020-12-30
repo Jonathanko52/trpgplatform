@@ -1,9 +1,12 @@
 import Header from "./presentational/header";
 import Sidebar from "./presentational/sidebar";
 import Body from "./presentational/body";
+import GameMap from "./presentational/gameMap";
+import CharacterSheet from "./presentational/characterSheet";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { createUseStyles } from "react-jss";
-import Link from "next/link";
 
 export const useStyles = createUseStyles({
   home: {
@@ -25,11 +28,23 @@ export default function Home() {
 
   return (
     <div className={classes.home}>
-      <Header></Header>
-      <div className={classes.container}>
-        <Sidebar></Sidebar>
-        <Body></Body>
-      </div>
+      <Router>
+        <Header></Header>
+        <div className={classes.container}>
+          <Sidebar></Sidebar>
+          <Switch>
+            <Route exact path="/">
+              <Body />
+            </Route>
+            <Route path="/characterSheet">
+              <GameMap />
+            </Route>
+            <Route path="/map">
+              <CharacterSheet />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
