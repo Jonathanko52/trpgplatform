@@ -36,10 +36,10 @@ export default function Home() {
             <Route exact path="/">
               <Body />
             </Route>
-            <Route path="/characterSheet">
+            <Route path="/map">
               <GameMap />
             </Route>
-            <Route path="/map">
+            <Route path="/characterSheet">
               <CharacterSheet />
             </Route>
           </Switch>
