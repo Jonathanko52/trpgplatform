@@ -34,13 +34,13 @@ export default function Home() {
           <Sidebar></Sidebar>
           <Switch>
             <Route exact path="/">
-              <Body />
+              <CharacterSheet />
             </Route>
             <Route path="/map">
               <GameMap />
             </Route>
             <Route path="/characterSheet">
-              <CharacterSheet />
+              <Body />
             </Route>
           </Switch>
         </div>
