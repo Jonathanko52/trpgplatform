@@ -1,16 +1,28 @@
 {
   "characterSheet": {
-    "attributes": [
-      "strength",
-      "dexterity",
-      "constitution",
-      "intelligence",
-      "wisdom",
-      "charisma"
-    ],
-    "feats": [],
-    "skills": [],
-    "savingThrows": [],
-    "Peception": 0
+    "noncalculatedValues": {
+      "attributes": [
+        "strength",
+        "dexterity",
+        "constitution",
+        "intelligence",
+        "wisdom",
+        "charisma"
+      ],
+      "feats": [],
+      "skills": [],
+      "savingthrows": []
+    },
+    "calculatedValues": {
+      "skills": [],
+      "savingThrows": [],
+      "perception": 0,
+      "armorClass": 0,
+      "initiative": 0,
+      "speed": 0,
+      "hitDice": 0,
+      "attacks": [],
+      "spells": []
+    }
   }
 }
