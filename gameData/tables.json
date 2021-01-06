@@ -1,6 +1,25 @@
 {
   "characterSheet": {
     "noncalculatedValues": {
+      "characterName": "",
+      "class": "",
+      "level": 0,
+      "race": "",
+      "background": "",
+      "alignment": "",
+      "playerName": "",
+      "experiencePoints": "",
+      "inspiration": 0,
+      "proficiencyBonus": "",
+      "languages": "",
+      "currentHitpoints": "",
+      "temporaryHitpoints": "",
+      "deathSaves": "",
+      "equipment": [],
+      "personalityTraits": [],
+      "ideals": [],
+      "bonds": [],
+      "flaws": [],
       "attributes": [
         "strength",
         "dexterity",
