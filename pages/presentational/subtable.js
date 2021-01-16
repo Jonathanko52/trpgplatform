@@ -3,22 +3,37 @@ import { createUseStyles } from "react-jss";
 import data from "./../../gameData/tables.json";
 
 export const useStyles = createUseStyles({
-  characterSheet: { border: "solid 1px", flexGrow: "1" },
+  subTable: { border: "solid 1px", flexGrow: "1" },
+  subTableItem: { border: "solid 1px", flexGrow: "1" },
 });
 
-export function Subtable() {
+export function Subtable(props) {
   const classes = useStyles();
-  let attributesArray = [];
-  data.characterSheet.attributes.forEach((cur) => {
-    attributesArray.push(<Attribute text={cur} />);
+  let array = [];
+  props.subtableContents.forEach((cur) => {
+    array.push(<SubtableItem text={cur} />);
   });
 
   return (
-    <div className={classes.characterSheet}>
-      <h4>Character Sheet</h4>
-      {attributesArray}
+    <div className={classes.subTable}>
+      <h4>{props.subTableheader}</h4>
+      {array}
     </div>
   );
 }
+
+export function SubtableItem(props) {
+  const classes = useStyles();
+
+  return (
+    <div>
+      <input type="text" className={classes.subTableItem}>
+        {subtableItem}
+      </input>
+    </div>
+  );
+}
+
+export default attribute;
 
 export default Subtable;
