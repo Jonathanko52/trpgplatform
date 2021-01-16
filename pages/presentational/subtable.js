@@ -34,6 +34,4 @@ export function SubtableItem(props) {
   );
 }
 
-export default attribute;
-
 export default Subtable;

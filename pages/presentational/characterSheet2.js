@@ -1,7 +1,8 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import Attribute from "./attribute.js";
-import data from "./../../gameData/tables.json";
+import data from "./../../gameData/tables2.json";
+import subtable from "./subtable";
 
 export const useStyles = createUseStyles({
   characterSheet: { border: "solid 1px", flexGrow: "1" },
@@ -9,16 +10,21 @@ export const useStyles = createUseStyles({
 
 export function CharacterSheet2() {
   const classes = useStyles();
-  let attributesArray = [];
-  console.log("data", data.characterSheet);
-  data.characterSheet.attributes.forEach((cur) => {
-    attributesArray.push(<Attribute text={cur} />);
-  });
+  let contents = [];
+  let pageData = data.characterSheet.noncalculatedValues;
+  console.log("PAGEDATA", pageData);
+  for (const key in pageData.valueNames) {
+    contents.push(
+      <div>
+        {pageData.valueNames[key]}: {pageData[key]}
+      </div>
+    );
+  }
 
   return (
     <div className={classes.characterSheet}>
       <h4>Character Sheet</h4>
-      {attributesArray}
+      {contents}
     </div>
   );
 }
