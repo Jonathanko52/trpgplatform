@@ -9,7 +9,6 @@ export const useStyles = createUseStyles({
 export function Subtable() {
   const classes = useStyles();
   let attributesArray = [];
-  console.log("data", data.characterSheet);
   data.characterSheet.attributes.forEach((cur) => {
     attributesArray.push(<Attribute text={cur} />);
   });
