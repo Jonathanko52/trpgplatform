@@ -3,20 +3,24 @@ import { createUseStyles } from "react-jss";
 import data from "./../../gameData/tables.json";
 
 export const useStyles = createUseStyles({
-  subTable: { border: "solid 1px", flexGrow: "1" },
-  subTableItem: { border: "solid 1px", flexGrow: "1" },
+  subTable: { flexGrow: "1" },
+  subTableItem: {
+    flexGrow: "1",
+    color: "red",
+    marginTop: "1em",
+  },
 });
 
 export function Subtable(props) {
   const classes = useStyles();
   let array = [];
-  props.subtableContents.forEach((cur) => {
-    array.push(<SubtableItem text={cur} />);
+  props.contents.forEach((cur, index) => {
+    array.push(<SubtableItem key={index} item={cur[0]} value={cur[1]} />);
   });
 
   return (
     <div className={classes.subTable}>
-      <h4>{props.subTableheader}</h4>
+      <h4>{props.header}</h4>
       {array}
     </div>
   );
@@ -24,12 +28,14 @@ export function Subtable(props) {
 
 export function SubtableItem(props) {
   const classes = useStyles();
-
+  console.log(typeof props.item);
   return (
     <div>
-      <input type="text" className={classes.subTableItem}>
-        {subtableItem}
-      </input>
+      <label for="fname">{props.item} : </label>
+      <input
+        type="text"
+        value={props.value}
+        className={classes.subTableItem}></input>
     </div>
   );
 }
