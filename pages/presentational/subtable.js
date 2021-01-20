@@ -10,6 +10,21 @@ export const useStyles = createUseStyles({
   },
 });
 
+export function SubtableContainer(props) {
+  const classes = useStyles();
+  let array = [];
+  props.contents.forEach((cur, index) => {
+    array.push(<SubtableItem key={index} item={cur[0]} value={cur[1]} />);
+  });
+
+  return (
+    <div className={classes.subTableContainer}>
+      <h4 className={classes.subTableHeader}>{props.header}</h4>
+      <div className={classes.subTable}>{array}</div>
+    </div>
+  );
+}
+
 export function Subtable(props) {
   const classes = useStyles();
   let array = [];

@@ -29,7 +29,7 @@
         "charisma": "Charisma",
         "feats": "Feats",
         "skills": "Skills",
-        "savingthrows": "SavingThrows"
+        "savingthrows": "Saving Throws"
       },
       "characterName": "",
       "class": "",
@@ -70,6 +70,36 @@
       "hitDice": 0,
       "attacks": [],
       "spells": []
+    },
+    "organization": {
+      "profile": [
+        "characterName",
+        "class",
+        "level",
+        "race",
+        "background",
+        "alignment",
+        "playerName",
+        "experiencePoints"
+      ],
+      "stuff": ["inspiration", "proficiencyBonus", "savingthrows"],
+      "languages": "Languages",
+      "currentHitpoints": "Current Hitpoints",
+      "temporaryHitpoints": "Temporary Hitpoints",
+      "deathSaves": "Death Saves",
+      "equipment": "Equipment",
+      "personalityTraits": "Personality Traits",
+      "ideals": "Ideals",
+      "bonds": "Bonds",
+      "flaws": "Flaws",
+      "strength": "Strength",
+      "dexterity": "Dexterity",
+      "constitution": "Constitution",
+      "intelligence": "Intelligence",
+      "wisdom": "Wisdom",
+      "charisma": "Charisma",
+      "feats": "Feats",
+      "skills": "Skills"
     }
   }
 }
