@@ -1,13 +1,12 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import data from "./../../gameData/tables.json";
 
 export const useStyles = createUseStyles({
-  subTable: { flexGrow: "1" },
+  subTableContainer: {},
+  subTable: { flexWrap: "wrap", display: "flex" },
   subTableItem: {
     flexGrow: "1",
-    color: "red",
-    marginTop: "1em",
+    margin: "1em",
   },
 });
 
@@ -19,29 +18,25 @@ export function Subtable(props) {
   });
 
   return (
-    <div className={classes.subTable}>
-      <h4>{props.header}</h4>
-      {array}
+    <div className={classes.subTableContainer}>
+      <h4 className={classes.subTableHeader}>{props.header}</h4>
+      <div className={classes.subTable}>{array}</div>
     </div>
   );
 }
 
 export function SubtableItem(props) {
   const classes = useStyles();
-  console.log(typeof props.item);
   let value = props.value;
   if (Array.isArray(value)) {
     value = value.reduce((acc, cur) => {
       return acc + cur;
-    });
+    }, []);
   }
   return (
-    <div>
+    <div className={classes.subTableItem}>
       <label for="fname">{props.item} : </label>
-      <input
-        type="text"
-        value={props.value}
-        className={classes.subTableItem}></input>
+      <input type="text" value={props.value}></input>
     </div>
   );
 }

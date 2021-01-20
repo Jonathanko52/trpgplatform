@@ -2,7 +2,7 @@ import Header from "./presentational/header";
 import Sidebar from "./presentational/sidebar";
 import Body from "./presentational/body";
 import GameMap from "./presentational/gameMap";
-import CharacterSheet from "./presentational/characterSheet2";
+import CharacterSheet from "./presentational/characterSheet";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
