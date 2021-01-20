@@ -29,6 +29,12 @@ export function Subtable(props) {
 export function SubtableItem(props) {
   const classes = useStyles();
   console.log(typeof props.item);
+  let value = props.value;
+  if (Array.isArray(value)) {
+    value = value.reduce((acc, cur) => {
+      return acc + cur;
+    });
+  }
   return (
     <div>
       <label for="fname">{props.item} : </label>
