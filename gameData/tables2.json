@@ -71,6 +71,8 @@
       "attacks": [],
       "spells": []
     },
+    "calculations": {},
+
     "organization": {
       "profile": [
         "characterName",
@@ -98,7 +100,6 @@
       "personalityTraits": "Personality Traits",
       "ideals": "Ideals",
       "bonds": "Bonds",
-
       "feats": "Feats",
       "skills": "Skills"
     }
