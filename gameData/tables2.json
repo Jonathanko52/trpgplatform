@@ -74,7 +74,7 @@
     "calculations": {},
 
     "organization": {
-      "profile": [
+      "Profile": [
         "characterName",
         "class",
         "level",
@@ -84,12 +84,11 @@
         "playerName",
         "experiencePoints"
       ],
-      "stuff": ["inspiration", "proficiencyBonus", "savingthrows"],
+      "Stuff": ["inspiration", "proficiencyBonus", "savingthrows"],
       "languages": "Languages",
       "Status": ["currentHitpoints", "temporaryHitpoints", "deathSaves"],
       "Inventory": ["equipment"],
       "Attributes": [
-        "flaws",
         "strength",
         "dexterity",
         "constitution",
@@ -97,11 +96,8 @@
         "wisdom",
         "charisma"
       ],
-      "personalityTraits": "Personality Traits",
-      "ideals": "Ideals",
-      "bonds": "Bonds",
-      "feats": "Feats",
-      "skills": "Skills"
+      "Personality": ["flaws", "bonds", "ideals"],
+      "Abilities": ["feats", "skills"]
     }
   }
 }
