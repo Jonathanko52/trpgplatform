@@ -11,9 +11,11 @@ export function CharacterSheet() {
   const classes = useStyles();
   let contents = [];
   let pageData = data.characterSheet.noncalculatedValues;
+  let additionalData = data.characterSheet.organization;
   for (const key in pageData.valueNames) {
     contents.push([pageData.valueNames[key], pageData[key]]);
   }
+  console.log(additionalData);
 
   return (
     <div className={classes.characterSheet}>
