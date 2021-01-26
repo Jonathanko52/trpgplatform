@@ -15,7 +15,6 @@ export function CharacterSheet() {
   for (const key in pageData.valueNames) {
     contents.push([pageData.valueNames[key], pageData[key]]);
   }
-  console.log(additionalData);
 
   return (
     <div className={classes.characterSheet}>
