@@ -13,9 +13,23 @@ export const useStyles = createUseStyles({
 export function SubtableContainer(props) {
   const classes = useStyles();
   let array = [];
-  props.contents.forEach((cur, index) => {
-    array.push(<SubtableItem key={index} item={cur[0]} value={cur[1]} />);
-  });
+
+  const subtableContentSort = () => {
+    if (props.organization) {
+      for (const keys in props.organization) {
+        console.log(props.organization);
+        array.push(
+          <Subtable
+            header={keys}
+            subtableitems={props.organization[keys]}></Subtable>
+        );
+      }
+    }
+  };
+  subtableContentSort();
+  // props.contents.forEach((cur, index) => {
+  //   array.push(<SubtableItem key={index} item={cur[0]} value={cur[1]} />);
+  // });
 
   return (
     <div className={classes.subTableContainer}>
@@ -23,6 +37,12 @@ export function SubtableContainer(props) {
       <div className={classes.subTable}>{array}</div>
     </div>
   );
+}
+
+export function Subtable(header, subtableitems) {
+  let innerArray = [];
+
+  return <div className={classes.subTable}></div>;
 }
 
 export function SubtableItem(props) {
@@ -41,4 +61,4 @@ export function SubtableItem(props) {
   );
 }
 
-export default Subtable;
+export default SubtableContainer;

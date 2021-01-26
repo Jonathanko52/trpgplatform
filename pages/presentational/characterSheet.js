@@ -15,12 +15,15 @@ export function CharacterSheet() {
   let additionalData = data.characterSheet.organization;
   for (const key in pageData.valueNames) {
     contents.push([pageData.valueNames[key], pageData[key]]);
-    organization;
   }
+  organization = additionalData;
 
   return (
     <div className={classes.characterSheet}>
-      <Subtable header="Character Sheet" contents={contents}></Subtable>
+      <Subtable
+        header="Character Sheet"
+        contents={contents}
+        organization={organization}></Subtable>
     </div>
   );
 }
