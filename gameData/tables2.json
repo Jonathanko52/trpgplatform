@@ -85,7 +85,7 @@
         "experiencePoints"
       ],
       "Stuff": ["inspiration", "proficiencyBonus", "savingthrows"],
-      "Languages": "Languages",
+      "Languages": ["Languages"],
       "Status": ["currentHitpoints", "temporaryHitpoints", "deathSaves"],
       "Inventory": ["equipment"],
       "Attributes": [

@@ -1,7 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import data from "../../gameData/tables2.json";
-import Subtable from "./subtable";
+import SubtableContainer from "./subtable";
 
 export const useStyles = createUseStyles({
   characterSheet: { border: "solid 1px", flexGrow: "1", paddingLeft: "2em" },
@@ -17,13 +17,12 @@ export function CharacterSheet() {
     contents.push([pageData.valueNames[key], pageData[key]]);
   }
   organization = additionalData;
-
   return (
     <div className={classes.characterSheet}>
-      <Subtable
+      <SubtableContainer
         header="Character Sheet"
         contents={contents}
-        organization={organization}></Subtable>
+        organization={organization}></SubtableContainer>
     </div>
   );
 }
