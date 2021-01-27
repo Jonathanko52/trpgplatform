@@ -17,7 +17,6 @@ export function SubtableContainer(props) {
   const subtableContentSort = () => {
     if (props.organization) {
       for (const keys in props.organization) {
-        console.log(props.organization);
         array.push(
           <Subtable
             header={keys}
