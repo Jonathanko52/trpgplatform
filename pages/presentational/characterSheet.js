@@ -4,7 +4,7 @@ import data from "../../gameData/tables2.json";
 import SubtableContainer from "./subtable";
 
 export const useStyles = createUseStyles({
-  characterSheet: { border: "solid 1px", flexGrow: "1", paddingLeft: "2em" },
+  characterSheet: { border: "solid 1px", flexGrow: "1" },
 });
 
 export function CharacterSheet() {
