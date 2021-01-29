@@ -3,7 +3,13 @@ import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
   subTableContainer: {},
-  subTable: { flexWrap: "wrap", display: "flex", border: "1px solid" },
+  subTable: {
+    flexWrap: "wrap",
+    display: "flex",
+    borderTop: "1px solid",
+    borderBottom: "1px solid",
+    paddingLeft: "2em",
+  },
   subTableItem: {
     flexGrow: "1",
     margin: "1em",
