@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
   subTableContainer: {},
-  subTable: { flexWrap: "wrap", display: "flex" },
+  subTable: { flexWrap: "wrap", display: "flex", border: "1px" },
   subTableItem: {
     flexGrow: "1",
     margin: "1em",
@@ -27,9 +27,6 @@ export function SubtableContainer(props) {
     }
   };
   subtableContentSort();
-  // props.contents.forEach((cur, index) => {
-  //   array.push(<SubtableItem key={index} item={cur[0]} value={cur[1]} />);
-  // });
 
   return (
     <div className={classes.subTableContainer}>
