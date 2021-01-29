@@ -6,13 +6,15 @@ export const useStyles = createUseStyles({
   subTable: {
     flexWrap: "wrap",
     display: "flex",
-    borderTop: "1px solid",
-    borderBottom: "1px solid",
-    paddingLeft: "2em",
+    border: "1px solid",
+    flexGrow: "1",
   },
   subTableItem: {
-    flexGrow: "1",
     margin: "1em",
+  },
+  subTableHeader: {
+    paddingLeft: "2em",
+    flexBasis: "100%",
   },
 });
 
@@ -22,8 +24,8 @@ export function SubtableContainer(props) {
 
   const subtableContentSort = () => {
     if (props.organization) {
+      console.log(props.contents);
       for (const keys in props.organization) {
-        console.log("insubtablecontainer", props.organization[keys]);
         array.push(
           <Subtable
             header={keys}
