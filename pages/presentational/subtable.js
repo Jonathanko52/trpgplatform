@@ -23,15 +23,16 @@ export function SubtableContainer(props) {
   let content = props.contents;
   const classes = useStyles();
   let array = [];
-
   const subtableContentSort = () => {
     if (props.organization) {
-      for (const keys in props.organization) {
+      for (const keys in organization) {
+        let subtableItems = [];
+        organization[keys].forEach((cur) => {
+          subtableItems.push(content[cur]);
+        });
+        console.log(subtableItems);
         array.push(
-          <Subtable
-            header={keys}
-            subtableitems={organization[keys]}
-            content={content}></Subtable>
+          <Subtable header={keys} subtableitems={subtableItems}></Subtable>
         );
       }
     }
@@ -50,9 +51,12 @@ export function Subtable(props) {
   const classes = useStyles();
 
   let innerArray = [];
-  console.log("PROPS", props);
   props.subtableitems.forEach((cur, index) => {
-    innerArray.push(<SubtableItem key={index} item={cur} value={cur} />);
+    if (cur) {
+      let item = cur[0];
+      let value = cur[1];
+      innerArray.push(<SubtableItem key={index} item={item} value={value} />);
+    }
   });
   return (
     <div className={classes.subTable}>
