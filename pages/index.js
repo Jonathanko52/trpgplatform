@@ -13,7 +13,7 @@ export const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
-    border: "solid 1px red",
+    border: "solid 1px",
     margin: "-8px",
   },
   container: {

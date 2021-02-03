@@ -6,7 +6,9 @@ export const useStyles = createUseStyles({
   subTable: {
     flexWrap: "wrap",
     display: "flex",
-    border: "1px solid",
+    borderTop: "1px solid",
+    borderBottom: "1px solid",
+
     flexGrow: "1",
   },
   subTableItem: {
