@@ -70,13 +70,20 @@ export function SubtableItem(props) {
   let value = props.value;
   if (Array.isArray(value)) {
     value = value.reduce((acc, cur) => {
-      return acc + cur;
+      acc.push(cur);
+      return acc;
     }, []);
+  } else {
+    value = [value];
   }
+  value = value.map((cur) => {
+    return <input type="text" value={cur}></input>;
+  });
+
   return (
     <div className={classes.subTableItem}>
       <label for="fname">{props.item} : </label>
-      <input type="text" value={props.value}></input>
+      {value}
     </div>
   );
 }

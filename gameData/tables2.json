@@ -45,20 +45,20 @@
       "currentHitpoints": "",
       "temporaryHitpoints": "",
       "deathSaves": "",
-      "equipment": [],
-      "personalityTraits": [],
-      "ideals": [],
-      "bonds": [],
-      "flaws": [],
+      "equipment": [""],
+      "personalityTraits": [""],
+      "ideals": [""],
+      "bonds": [""],
+      "flaws": [""],
       "strength": 0,
       "dexterity": 0,
       "constitution": 0,
       "intelligence": 0,
       "wisdom": 0,
       "charisma": 0,
-      "feats": [],
-      "skills": [],
-      "savingthrows": []
+      "feats": [""],
+      "skills": [""],
+      "savingthrows": [""]
     },
     "calculatedValues": {
       "skills": [],
@@ -85,7 +85,7 @@
         "experiencePoints"
       ],
       "Stuff": ["inspiration", "proficiencyBonus", "savingthrows"],
-      "Languages": ["Languages"],
+      "Languages": ["languages"],
       "Status": ["currentHitpoints", "temporaryHitpoints", "deathSaves"],
       "Inventory": ["equipment"],
       "Attributes": [
