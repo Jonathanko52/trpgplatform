@@ -30,7 +30,6 @@ export function SubtableContainer(props) {
         organization[keys].forEach((cur) => {
           subtableItems.push(content[cur]);
         });
-        console.log(subtableItems);
         array.push(
           <Subtable header={keys} subtableitems={subtableItems}></Subtable>
         );
