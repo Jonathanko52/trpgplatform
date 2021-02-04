@@ -8,7 +8,6 @@ export const useStyles = createUseStyles({
     display: "flex",
     borderTop: "1px solid",
     borderBottom: "1px solid",
-
     flexGrow: "1",
   },
   subTableItem: {
