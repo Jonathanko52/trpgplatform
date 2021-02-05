@@ -5,6 +5,19 @@ import SubtableContainer from "./subtable";
 
 export const useStyles = createUseStyles({
   characterSheet: { border: "solid 1px", flexGrow: "1" },
+  buttonContainer: {
+    flexWrap: "wrap",
+    display: "flex",
+    borderBottom: "1px solid",
+    flexGrow: "1",
+    marginLeft: "10%",
+    marginRight: "10%",
+    paddingTop: "2em",
+    paddingBottom: "2em",
+    borderLeft: "1px solid",
+    borderRight: "1px solid",
+    justifyContent: "space-evenly",
+  },
 });
 
 export function CharacterSheet() {
@@ -23,6 +36,10 @@ export function CharacterSheet() {
         header="Character Sheet"
         contents={contents}
         organization={organization}></SubtableContainer>
+      <div className={classes.buttonContainer}>
+        <button>Save</button>
+        <button>Cancel</button>
+      </div>
     </div>
   );
 }

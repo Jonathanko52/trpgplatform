@@ -3,9 +3,9 @@ import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
   subTableContainer: {
-    marginLeft: "20%",
-    marginRight: "20%",
-    marginTop: "2em",
+    marginLeft: "10%",
+    marginRight: "10%",
+    paddingTop: "1em",
     borderLeft: "1px solid",
     borderRight: "1px solid",
   },
