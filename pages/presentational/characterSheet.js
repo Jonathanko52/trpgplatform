@@ -34,9 +34,12 @@ export function CharacterSheet() {
   organization = additionalData;
   return (
     <div className={classes.characterSheet}>
-      <SubtableContainer
+      {/* <SubtableContainer
         header="Character Sheet"
         contents={contents}
+        organization={organization}></SubtableContainer> */}
+      <SubtableContainer
+        contents={calculatedValues}
         organization={organization}></SubtableContainer>
       <div className={classes.buttonContainer}>
         <button>Save</button>
