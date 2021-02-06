@@ -29,6 +29,8 @@ export function CharacterSheet() {
   for (const key in pageData.valueNames) {
     contents[key] = [pageData.valueNames[key], pageData[key]];
   }
+  let calculatedValues = data.characterSheet.calculatedValues;
+
   organization = additionalData;
   return (
     <div className={classes.characterSheet}>
