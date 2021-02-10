@@ -72,15 +72,15 @@
         "attacks": "Attacks",
         "spells": "Spells"
       },
-      "skills": [],
-      "savingThrows": [],
+      "skills": [""],
+      "savingThrows": [""],
       "perception": 0,
       "armorClass": 0,
       "initiative": 0,
       "speed": 0,
       "hitDice": 0,
-      "attacks": [],
-      "spells": []
+      "attacks": [""],
+      "spells": [""]
     },
     "calculations": {},
 
