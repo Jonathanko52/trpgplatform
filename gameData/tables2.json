@@ -63,14 +63,14 @@
     "calculatedValues": {
       "valueNames": {
         "skills": "Skills",
-        "savingThrows": [],
-        "perception": 0,
-        "armorClass": 0,
-        "initiative": 0,
-        "speed": 0,
-        "hitDice": 0,
-        "attacks": [],
-        "spells": []
+        "savingThrows": "Saving Throws",
+        "perception": "Perception",
+        "armorClass": "Armor Class",
+        "initiative": "Initiative",
+        "speed": "Speed",
+        "hitDice": "Hit Dice",
+        "attacks": "Attacks",
+        "spells": "Spells"
       },
       "skills": [],
       "savingThrows": [],
