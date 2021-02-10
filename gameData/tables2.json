@@ -108,7 +108,15 @@
         "charisma"
       ],
       "Personality": ["flaws", "bonds", "ideals"],
-      "Abilities": ["feats", "skills"]
+      "Abilities": ["feats", "traits"],
+      "Skills": ["skills"],
+      "Saving Throws": ["savingThrows"],
+      "Perception": ["perception"],
+      "Armor Class": ["armorClass"],
+      "Initiative": ["initiative"],
+      "Speed": ["speed"],
+      "Hit Dice": ["hitDice"],
+      "Attacks and Spellcasting": ["attacks", "spells"]
     }
   }
 }
