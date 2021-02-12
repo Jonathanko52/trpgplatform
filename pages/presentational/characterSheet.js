@@ -22,9 +22,13 @@ export const useStyles = createUseStyles({
 
 export function CharacterSheet() {
   const classes = useStyles();
-  const saveCharacterSheet = () => {};
+  const saveCharacterSheet = () => {
+    alert("SAVING");
+  };
   const loadCharacterSheet = () => {};
-  const deleteCharacterSheet = () => {};
+  const deleteCharacterSheet = () => {
+    alert("DELETING");
+  };
   let contents = {};
   let organization = [];
   let pageData = data.characterSheet.noncalculatedValues;
@@ -45,8 +49,8 @@ export function CharacterSheet() {
         organization={organization}></SubtableContainer>
 
       <div className={classes.buttonContainer}>
-        <button>Save</button>
-        <button>Cancel</button>
+        <button onClick={saveCharacterSheet()}>Save</button>
+        <button OnClick={deleteCharacterSheet}>Cancel</button>
       </div>
     </div>
   );
