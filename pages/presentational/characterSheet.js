@@ -18,7 +18,16 @@ export const useStyles = createUseStyles({
     borderRight: "1px solid",
     justifyContent: "space-evenly",
   },
-  characterSheetButtons: {},
+  characterSheetButtons: {
+    border: "none",
+    color: "black",
+    // backgroundColor:''
+    padding: "0.5em 1em",
+    textAlign: "center",
+    textDecoration: "none",
+    display: "inlineBlock",
+    fontSize: "1em",
+  },
 });
 
 export function CharacterSheet() {
