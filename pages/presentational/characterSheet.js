@@ -25,7 +25,12 @@ export function CharacterSheet() {
   const saveCharacterSheet = () => {
     alert("SAVING");
   };
-  const loadCharacterSheet = () => {};
+  const loadCharacterSheet = () => {
+    alert("LOADING");
+  };
+  const clearCharacterSheet = () => {
+    alert("CLEARING");
+  };
   const deleteCharacterSheet = () => {
     alert("DELETING");
   };
@@ -57,9 +62,21 @@ export function CharacterSheet() {
         </button>
         <button
           onClick={() => {
+            loadCharacterSheet();
+          }}>
+          Load
+        </button>
+        <button
+          onClick={() => {
             deleteCharacterSheet();
           }}>
-          Cancel
+          Delete
+        </button>
+        <button
+          onClick={() => {
+            clearCharacterSheet();
+          }}>
+          Clear
         </button>
       </div>
     </div>
