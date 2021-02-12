@@ -56,25 +56,55 @@ export function CharacterSheet() {
       <div className={classes.buttonContainer}>
         <button
           onClick={() => {
-            saveCharacterSheet();
+            let confirm = window.confirm(
+              "Are you sure you want to save your character?"
+            );
+
+            if (confirm) {
+              saveCharacterSheet();
+            } else {
+              alert("load canceled");
+            }
           }}>
           Save
         </button>
         <button
           onClick={() => {
-            loadCharacterSheet();
+            let confirm = window.confirm(
+              "Are you sure you want to load your character?"
+            );
+            if (confirm) {
+              loadCharacterSheet();
+            } else {
+              alert("load canceled");
+            }
           }}>
           Load
         </button>
         <button
           onClick={() => {
-            deleteCharacterSheet();
+            let confirm = window.confirm(
+              "Are you sure you want to delete your character?"
+            );
+
+            if (confirm) {
+              deleteCharacterSheet();
+            } else {
+              alert("delete canceled");
+            }
           }}>
           Delete
         </button>
         <button
           onClick={() => {
-            clearCharacterSheet();
+            let confirm = window.confirm(
+              "Are you sure you want to clear your character?"
+            );
+            if (confirm) {
+              clearCharacterSheet();
+            } else {
+              alert("clear canceled");
+            }
           }}>
           Clear
         </button>
