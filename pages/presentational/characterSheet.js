@@ -18,6 +18,7 @@ export const useStyles = createUseStyles({
     borderRight: "1px solid",
     justifyContent: "space-evenly",
   },
+  characterSheetButtons: {},
 });
 
 export function CharacterSheet() {
@@ -55,6 +56,7 @@ export function CharacterSheet() {
 
       <div className={classes.buttonContainer}>
         <button
+          className={classes.characterSheetButtons}
           onClick={() => {
             let confirm = window.confirm(
               "Are you sure you want to save your character?"
@@ -69,6 +71,7 @@ export function CharacterSheet() {
           Save
         </button>
         <button
+          className={classes.characterSheetButtons}
           onClick={() => {
             let confirm = window.confirm(
               "Are you sure you want to load your character?"
@@ -82,6 +85,7 @@ export function CharacterSheet() {
           Load
         </button>
         <button
+          className={classes.characterSheetButtons}
           onClick={() => {
             let confirm = window.confirm(
               "Are you sure you want to delete your character?"
@@ -96,6 +100,7 @@ export function CharacterSheet() {
           Delete
         </button>
         <button
+          className={classes.characterSheetButtons}
           onClick={() => {
             let confirm = window.confirm(
               "Are you sure you want to clear your character?"
