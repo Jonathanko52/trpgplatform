@@ -49,8 +49,18 @@ export function CharacterSheet() {
         organization={organization}></SubtableContainer>
 
       <div className={classes.buttonContainer}>
-        <button onClick={saveCharacterSheet()}>Save</button>
-        <button OnClick={deleteCharacterSheet}>Cancel</button>
+        <button
+          onClick={() => {
+            saveCharacterSheet();
+          }}>
+          Save
+        </button>
+        <button
+          onClick={() => {
+            deleteCharacterSheet();
+          }}>
+          Cancel
+        </button>
       </div>
     </div>
   );
