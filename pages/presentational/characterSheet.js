@@ -22,6 +22,9 @@ export const useStyles = createUseStyles({
 
 export function CharacterSheet() {
   const classes = useStyles();
+  const saveCharacterSheet;
+  const loadCharacterSheet;
+  const deleteCharacterSheet;
   let contents = {};
   let organization = [];
   let pageData = data.characterSheet.noncalculatedValues;
