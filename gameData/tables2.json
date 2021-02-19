@@ -82,8 +82,17 @@
       "attacks": [""],
       "spells": [""]
     },
-    "calculations": {},
-
+    "calculations": {
+      "skillsFormula": "",
+      "savingThrowsFormula": "",
+      "perceptionFormula": "",
+      "armorClassFormula": "",
+      "initiativeFormula": "",
+      "speedFormula": "",
+      "hitDiceFormula": "",
+      "attacksFormula": "",
+      "spellsFormula": ""
+    },
     "organization": {
       "Profile": [
         "characterName",

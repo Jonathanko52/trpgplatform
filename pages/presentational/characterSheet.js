@@ -21,7 +21,6 @@ export const useStyles = createUseStyles({
   characterSheetButtons: {
     border: "none",
     color: "black",
-    // backgroundColor:''
     padding: "0.5em 1em",
     textAlign: "center",
     textDecoration: "none",
