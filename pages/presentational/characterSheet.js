@@ -53,12 +53,14 @@ export function CharacterSheet() {
   let calculatedValues = data.characterSheet.calculatedValues;
   for (const key in calculatedValues.valueNames) {
     //runs the calculation on calculated value, which isn't terribly accurate
-    let calculationFunction = JSON.parse(calculations[key]);
-    let calculatedValuesAfterCalculation = calculationFunction(pageData);
-    contents[key] = [
-      calculatedValues.valueNames[key],
-      calculatedValuesAfterCalculation,
-    ];
+    let calculationFunction = data.characterSheet.calculations[key];
+    // console.log(typeof JSON.parse(calculationFunction));
+    console.log("KEY", key, "FUNC", calculationFunction);
+    // let calculatedValuesAfterCalculation = calculationFunction(pageData);
+    // contents[key] = [
+    //   calculatedValues.valueNames[key],
+    //   calculatedValuesAfterCalculation,
+    // ];
   }
   organization = additionalData;
   return (
