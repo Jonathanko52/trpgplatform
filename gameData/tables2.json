@@ -62,7 +62,7 @@
     },
     "calculatedValues": {
       "valueNames": {
-        "testStat":"Test Stat"
+        "testStat": "Test Stat",
         "skills": "Skills",
         "savingThrows": "Saving Throws",
         "perception": "Perception",
@@ -73,7 +73,7 @@
         "attacks": "Attacks",
         "spells": "Spells"
       },
-      "testState":0,
+      "testState": 0,
       "skills": [""],
       "savingThrows": [""],
       "perception": 0,
@@ -126,7 +126,7 @@
       "hitDiceFormula": "class based. d6 for wizards, d8 for artificer, bard, cleric, druid, monk, rogue, d10 for paladin, fighter, ranger, d12 for barbarian",
       "attacksFormula": "",
       "spellsFormula": "",
-      "testFormula":""
+      "testFormula": ""
     },
     "organization": {
       "Profile": [
