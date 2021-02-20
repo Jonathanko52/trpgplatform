@@ -85,16 +85,16 @@
       "spells": [""]
     },
     "calculations": {
-      "skills": { "func": "function(){console.log('test')}" },
-      "savingThrows": { "func": "function(){console.log('test')}" },
-      "perception": { "func": "function(){console.log('test')}" },
-      "armorClass": { "func": "function(){console.log('test')}" },
-      "initiative": { "func": "function(){console.log('test')}" },
-      "speed": { "func": "function(){console.log('test')}" },
-      "hitDice": { "func": "function(){console.log('test')}" },
-      "attacks": { "func": "function(){console.log('test')}" },
-      "spells": { "func": "function(){console.log('test')}" },
-      "testStat": { "func": "function(){console.log('test')}" }
+      "skills": { "func": "()=>{console.log('test')}" },
+      "savingThrows": { "func": "()=>{console.log('test')}" },
+      "perception": { "func": "()=>{console.log('test')}" },
+      "armorClass": { "func": "()=>{console.log('test')}" },
+      "initiative": { "func": "()=>{console.log('test')}" },
+      "speed": { "func": "()=>{console.log('test')}" },
+      "hitDice": { "func": "()=>{console.log('test')}" },
+      "attacks": { "func": "()=>{console.log('test')}" },
+      "spells": { "func": "()=>{console.log('test')}" },
+      "testStat": { "func": "()=>{console.log('test')}" }
     },
     "organization": {
       "Profile": [
