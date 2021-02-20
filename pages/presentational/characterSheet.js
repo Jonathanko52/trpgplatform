@@ -52,7 +52,14 @@ export function CharacterSheet() {
   }
   let calculatedValues = data.characterSheet.calculatedValues;
   for (const key in calculatedValues.valueNames) {
-    contents[key] = [calculatedValues.valueNames[key], calculatedValues[key]];
+    //runs the calculation on calculated value, which isn't terribly accurate
+    let calculatedValuesAfterCalculation = calculations[key](
+      calculatedValues[key]
+    );
+    contents[key] = [
+      calculatedValues.valueNames[key],
+      calculatedValuesAfterCalculation,
+    ];
   }
   organization = additionalData;
   return (
