@@ -119,9 +119,7 @@
         9,
         10
       ],
-      "perceptionFormula": () => {
-        console.log("test");
-      },
+      "perceptionFormula": "()={console.log('test)}",
       "armorClassFormula": "10 + dex is barbarian + con modifer if monk + wisdom modifier",
       "initiativeFormula": "d10 + dex",
       "speedFormula": "",
