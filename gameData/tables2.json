@@ -85,6 +85,7 @@
       "spells": [""]
     },
     "calculations": {
+      //do functions?
       "skillsFormula": "",
       "savingThrowsFormula": [
         null,
