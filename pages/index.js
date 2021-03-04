@@ -31,7 +31,7 @@ export default function Home() {
       <Router>
         <Header></Header>
         <div className={classes.container}>
-          <Sidebar></Sidebar>
+          <Sidebar />
           <Switch>
             <Route exact path="/">
               <CharacterSheet />

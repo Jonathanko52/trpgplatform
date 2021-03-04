@@ -14,17 +14,17 @@ export function Sidebar(props) {
       <ul>
         <li>
           <Link to="/">
-            <a>Home</a>
+            Home
           </Link>
         </li>
         <li>
           <Link to="/characterSheet">
-            <a>Character Sheet</a>
+            Character Sheet
           </Link>
         </li>
         <li>
           <Link to="/map">
-            <a>Map</a>
+            Map
           </Link>
         </li>
       </ul>
