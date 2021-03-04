@@ -32,14 +32,16 @@ export function SubtableContainer(props) {
   let array = [];
   const subtableContentSort = () => {
     if (props.organization) {
+      let count = 0;
       for (const keys in organization) {
         let subtableItems = [];
         organization[keys].forEach((cur) => {
           subtableItems.push(content[cur]);
         });
         array.push(
-          <Subtable header={keys} subtableitems={subtableItems}></Subtable>
+          <Subtable key={count} header={keys} subtableitems={subtableItems}></Subtable>
         );
+        count++;
       }
     }
   };
@@ -83,13 +85,13 @@ export function SubtableItem(props) {
   } else {
     value = [value];
   }
-  value = value.map((cur) => {
-    return <input type="text" value={cur}></input>;
+  value = value.map((cur, ind) => {
+    return <input key ={ind} type="text" value={cur}></input>;
   });
 
   return (
     <div className={classes.subTableItem}>
-      <label for="fname">{props.item} : </label>
+      <label >{props.item} : </label>
       {value}
     </div>
   );
