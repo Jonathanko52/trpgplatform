@@ -85,7 +85,7 @@
       "spells": [""]
     },
     "calculations": {
-      "skills": { "func": "()=>{console.log('test')}" },
+      "skills": { "func": "()=>{console.log(arguments)}" },
       "savingThrows": { "func": "()=>{console.log('test')}" },
       "perception": { "func": "()=>{console.log('test')}" },
       "armorClass": { "func": "()=>{console.log('test')}" },
