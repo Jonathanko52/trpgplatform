@@ -85,16 +85,16 @@
       "spells": [""]
     },
     "calculations": {
-      "skills": { "func": "()=>{console.log(arguments)}" },
-      "savingThrows": { "func": "()=>{console.log('test')}" },
-      "perception": { "func": "()=>{console.log('test')}" },
-      "armorClass": { "func": "()=>{console.log('test')}" },
-      "initiative": { "func": "()=>{console.log('test')}" },
-      "speed": { "func": "()=>{console.log('test')}" },
-      "hitDice": { "func": "()=>{console.log('test')}" },
-      "attacks": { "func": "()=>{console.log('test')}" },
-      "spells": { "func": "()=>{console.log('test')}" },
-      "testStat": { "func": "()=>{console.log('test')}" }
+      "skills": { "func": "(data)=>{}" },
+      "savingThrows": { "func": "(data)=>{}" },
+      "perception": { "func": "(data)=>{}" },
+      "armorClass": { "func": "(data)=>{}" },
+      "initiative": { "func": "(data)=>{}" },
+      "speed": { "func": "(data)=>{}" },
+      "hitDice": { "func": "(data)=>{}" },
+      "attacks": { "func": "(data)=>{}" },
+      "spells": { "func": "(data)=>{}" },
+      "testStat": { "func": "(data)=>{}" }
     },
     "organization": {
       "Profile": [
