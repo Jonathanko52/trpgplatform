@@ -55,13 +55,11 @@ export function CharacterSheet() {
     //runs the calculation on calculated value, which isn't terribly accurate
     let calculationFunction = data.characterSheet.calculations[key];
     let func = eval(calculationFunction.func);
-    func(pageData);
-
-    // let calculatedValuesAfterCalculation = calculationFunction(pageData);
-    // contents[key] = [
-    //   calculatedValues.valueNames[key],
-    //   calculatedValuesAfterCalculation,
-    // ];
+    let calculatedValuesAfterCalculation = func(pageData);
+    contents[key] = [
+      calculatedValues.valueNames[key],
+      calculatedValuesAfterCalculation,
+    ];
   }
   organization = additionalData;
   return (
