@@ -85,16 +85,16 @@
       "spells": [""]
     },
     "calculations": {
-      "skills": { "func": "(data)=>{}" },
-      "savingThrows": { "func": "(data)=>{}" },
-      "perception": { "func": "(data)=>{}" },
-      "armorClass": { "func": "(data)=>{}" },
-      "initiative": { "func": "(data)=>{}" },
-      "speed": { "func": "(data)=>{}" },
-      "hitDice": { "func": "(data)=>{}" },
-      "attacks": { "func": "(data)=>{}" },
-      "spells": { "func": "(data)=>{}" },
-      "testStat": { "func": "(data)=>{}" }
+      "skills": { "func": "(data)=>{return data}" },
+      "savingThrows": { "func": "(data)=>{return data}" },
+      "perception": { "func": "(data)=>{ return data}" },
+      "armorClass": { "func": "(data)=>{return data}" },
+      "initiative": { "func": "(data)=>{return data}" },
+      "speed": { "func": "(data)=>{return data}" },
+      "hitDice": { "func": "(data)=>{return data}" },
+      "attacks": { "func": "(data)=>{return data}" },
+      "spells": { "func": "(data)=>{return data}" },
+      "testStat": { "func": "(data)=>{return data}" }
     },
     "organization": {
       "Profile": [
