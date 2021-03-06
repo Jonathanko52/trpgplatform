@@ -85,7 +85,7 @@
       "spells": [""]
     },
     "calculations": {
-      "abilityScoreModifiers": {"1":-5, "2","3","4","5","6"},
+      "abilityScoreModifiers": {"1":-5, "2":-4,"3":-4,"4":-3,"5":-3,"6":-2,"7":-2,"8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"},
       "skills": { "func": "(data)=>{return data}" },
       "savingThrows": { "func": "(data)=>{return data}" },
       "perception": { "func": "(data)=>{ return data}" },
