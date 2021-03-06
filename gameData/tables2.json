@@ -85,6 +85,7 @@
       "spells": [""]
     },
     "calculations": {
+      "abilityScoreModifiers": {"1":-5, "2","3","4","5","6"},
       "skills": { "func": "(data)=>{return data}" },
       "savingThrows": { "func": "(data)=>{return data}" },
       "perception": { "func": "(data)=>{ return data}" },
