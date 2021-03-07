@@ -150,8 +150,34 @@
       "spells": { "func": "(data)=>{return data}" }
     },
     "organization": {
-      "Skills": [],
-      "Saving Throws": [],
+      "Skills": [
+        "skillsAcrobatics",
+        "skillsAnimalHandling",
+        "skillsArcana",
+        "skillsAthletics",
+        "skillsDeception",
+        "skillsHistory",
+        "skillsInsight",
+        "skillsIntimidation",
+        "skillsInvestigation",
+        "skillsMedicine",
+        "skillsNature",
+        "skillsPerception",
+        "skillsPerformance",
+        "skillsPersuasion",
+        "skillsReligion",
+        "skillsSleightOfHand",
+        "skillsStealth",
+        "skillsSurvival"
+      ],
+      "Saving Throws": [
+        "savingThrowsStrength",
+        "savingThrowsDexterity",
+        "savingThrowsConstitution",
+        "savingThrowsIntelligence",
+        "savingThrowsWisdom",
+        "savingThrowsCharisma"
+      ],
       "Profile": [
         "characterName",
         "class",
@@ -176,8 +202,6 @@
       ],
       "Personality": ["flaws", "bonds", "ideals"],
       "Abilities": ["feats", "traits"],
-      "Skills": ["skills"],
-      "Saving Throws": ["savingThrows"],
       "Perception": ["perception"],
       "Armor Class": ["armorClass"],
       "Initiative": ["initiative"],
