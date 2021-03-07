@@ -135,24 +135,23 @@
       "skillsSleightOfHand": { "func": "(data)=>{return data}" },
       "skillsStealth": { "func": "(data)=>{return data}" },
       "skillsSurvival": { "func": "(data)=>{return data}" },
-
       "savingThrowsStrength": { "func": "(data)=>{return data}" },
       "savingThrowsDexterity": { "func": "(data)=>{return data}" },
       "savingThrowsConstitution": { "func": "(data)=>{return data}" },
       "savingThrowsIntelligence": { "func": "(data)=>{return data}" },
       "savingThrowsWisdom": { "func": "(data)=>{return data}" },
       "savingThrowsCharisma": { "func": "(data)=>{return data}" },
-
       "perception": { "func": "(data)=>{ return data}" },
       "armorClass": { "func": "(data)=>{return data}" },
       "initiative": { "func": "(data)=>{return data}" },
       "speed": { "func": "(data)=>{return data}" },
       "hitDice": { "func": "(data)=>{return data}" },
       "attacks": { "func": "(data)=>{return data}" },
-      "spells": { "func": "(data)=>{return data}" },
-      "testStat": { "func": "(data)=>{return data}" }
+      "spells": { "func": "(data)=>{return data}" }
     },
     "organization": {
+      "Skills": [],
+      "Saving Throws": [],
       "Profile": [
         "characterName",
         "class",
