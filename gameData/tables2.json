@@ -138,7 +138,7 @@
         "29": 9,
         "30": 10
       },
-      "skillsAcrobatics": { "func": "(data)=>{return data}" },
+      "skillsAcrobatics": { "func": "(data)=>{return dex + prof}" },
       "skillsAnimalHandling": { "func": "(data)=>{return data}" },
       "skillsArcana": { "func": "(data)=>{return data}" },
       "skillsAthletics": { "func": "(data)=>{return data}" },
