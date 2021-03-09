@@ -140,38 +140,90 @@
         "30": 10
       },
       "skillsAcrobatics": {
-        "func": "(data)=>{ console.log(data.calculations.abilityScoreModifiers[data.noncalculatedValues.dexterity]) }"
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.dexterity] }"
       },
-      "skillsAnimalHandling": { "func": "(data)=>{return wis + prof}" },
-      "skillsArcana": { "func": "(data)=>{return int + prof}" },
-      "skillsAthletics": { "func": "(data)=>{return str + prof}" },
-      "skillsDeception": { "func": "(data)=>{return cha + prof}" },
-      "skillsHistory": { "func": "(data)=>{return int + prof}" },
-      "skillsInsight": { "func": "(data)=>{return wis + prof}" },
-      "skillsIntimidation": { "func": "(data)=>{return cha + prof}" },
-      "skillsInvestigation": { "func": "(data)=>{return int + prof" },
-      "skillsMedicine": { "func": "(data)=>{return wis + prof}" },
-      "skillsNature": { "func": "(data)=>{return int + prof}" },
-      "skillsPerception": { "func": "(data)=>{return wis + prof}" },
-      "skillsPerformance": { "func": "(data)=>{return cha + prof}" },
-      "skillsPersuasion": { "func": "(data)=>{return cha + prof}" },
-      "skillsReligion": { "func": "(data)=>{return int + prof}" },
-      "skillsSleightOfHand": { "func": "(data)=>{return dex + prof}" },
-      "skillsStealth": { "func": "(data)=>{return dex + prof}" },
-      "skillsSurvival": { "func": "(data)=>{return wis + prof}" },
-      "savingThrowsStrength": { "func": "(data)=>{return str}" },
-      "savingThrowsDexterity": { "func": "(data)=>{return dex}" },
-      "savingThrowsConstitution": { "func": "(data)=>{return con}" },
-      "savingThrowsIntelligence": { "func": "(data)=>{return int}" },
-      "savingThrowsWisdom": { "func": "(data)=>{return wis}" },
-      "savingThrowsCharisma": { "func": "(data)=>{return cha}" },
-      "perception": { "func": "(data)=>{ return 10 + wis}" },
-      "armorClass": { "func": "(data)=>{return 10 + dex OR armor}" },
-      "initiative": { "func": "(data)=>{return dex}" },
-      "speed": { "func": "(data)=>{return data}" },
-      "hitDice": { "func": "(data)=>{return class based}" },
-      "attacks": { "func": "(data)=>{return data}" },
-      "spells": { "func": "(data)=>{return data}" }
+      "skillsAnimalHandling": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.wisdom] }"
+      },
+      "skillsArcana": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.intelligence] }"
+      },
+      "skillsAthletics": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.strength] }"
+      },
+      "skillsDeception": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.charisma] }"
+      },
+      "skillsHistory": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.intelligence] }"
+      },
+      "skillsInsight": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.wisdom] }"
+      },
+      "skillsIntimidation": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.charisma] }"
+      },
+      "skillsInvestigation": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.intelligence] }"
+      },
+      "skillsMedicine": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.wisdom] }"
+      },
+      "skillsNature": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.intelligence] }"
+      },
+      "skillsPerception": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.wisdom]}"
+      },
+      "skillsPerformance": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.charisma] }"
+      },
+      "skillsPersuasion": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.charisma] }"
+      },
+      "skillsReligion": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.intelligence] }"
+      },
+      "skillsSleightOfHand": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.dexterity] }"
+      },
+      "skillsStealth": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.dexterity] }"
+      },
+      "skillsSurvival": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.wisdom] }"
+      },
+      "savingThrowsStrength": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.strength] }"
+      },
+      "savingThrowsDexterity": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.dexterity] }"
+      },
+      "savingThrowsConstitution": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.constitution] }"
+      },
+      "savingThrowsIntelligence": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.intelligence] }"
+      },
+      "savingThrowsWisdom": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.wisdom] }"
+      },
+      "savingThrowsCharisma": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.charisma] }"
+      },
+      "perception": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.wisdom] + 10 }"
+      },
+      "armorClass": {
+        "func": "(data)=>{return data.calculations.abilityScoreModifiers[data.noncalculatedValues.dexterity] + 10}"
+      },
+      "initiative": {
+        "func": "(data)=>{ return data.calculations.abilityScoreModifiers[data.noncalculatedValues.dexterity] }"
+      },
+      "speed": { "func": "(data)=>{return 0}" },
+      "hitDice": { "func": "(data)=>{return 0}" },
+      "attacks": { "func": "(data)=>{return 0}" },
+      "spells": { "func": "(data)=>{return 0}" }
     },
     "organization": {
       "Skills": [
