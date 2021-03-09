@@ -55,7 +55,7 @@ export function CharacterSheet() {
     //runs the calculation on calculated value, which isn't terribly accurate
     let calculationFunction = data.characterSheet.calculations[key];
     let func = eval(calculationFunction.func);
-    let calculatedValuesAfterCalculation = func(pageData);
+    let calculatedValuesAfterCalculation = func(data.characterSheet);
     contents[key] = [
       calculatedValues.valueNames[key],
       calculatedValuesAfterCalculation,

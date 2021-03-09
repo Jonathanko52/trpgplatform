@@ -107,6 +107,7 @@
     },
     "calculations": {
       "abilityScoreModifiers": {
+        "0": "TEST",
         "1": -5,
         "2": -4,
         "3": -4,
@@ -138,7 +139,9 @@
         "29": 9,
         "30": 10
       },
-      "skillsAcrobatics": { "func": "(data)=>{return dex + prof}" },
+      "skillsAcrobatics": {
+        "func": "(data)=>{ console.log(data.calculations.abilityScoreModifiers[data.noncalculatedValues.dexterity]) }"
+      },
       "skillsAnimalHandling": { "func": "(data)=>{return wis + prof}" },
       "skillsArcana": { "func": "(data)=>{return int + prof}" },
       "skillsAthletics": { "func": "(data)=>{return str + prof}" },
