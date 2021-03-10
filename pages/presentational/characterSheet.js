@@ -43,6 +43,9 @@ export function CharacterSheet() {
   const deleteCharacterSheet = () => {
     alert("DELETING");
   };
+  const updateCharacterSheetOnChange = () => {
+    console.log("test");
+  };
   let contents = {};
   let organization = [];
   let pageData = data.characterSheet.noncalculatedValues;
