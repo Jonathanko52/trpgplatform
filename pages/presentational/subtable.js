@@ -27,6 +27,7 @@ export const useStyles = createUseStyles({
 
 export function SubtableContainer(props) {
   let organization = props.organization;
+  let onchangelistener = props.onchangelistener;
   let content = props.contents;
   const classes = useStyles();
   let array = [];
@@ -39,7 +40,10 @@ export function SubtableContainer(props) {
           subtableItems.push(content[cur]);
         });
         array.push(
-          <Subtable key={count} header={keys} subtableitems={subtableItems}></Subtable>
+          <Subtable
+            key={count}
+            header={keys}
+            subtableitems={subtableItems}></Subtable>
         );
         count++;
       }
@@ -86,12 +90,12 @@ export function SubtableItem(props) {
     value = [value];
   }
   value = value.map((cur, ind) => {
-    return <input key ={ind} type="text" value={cur}></input>;
+    return <input key={ind} type="text" value={cur}></input>;
   });
 
   return (
     <div className={classes.subTableItem}>
-      <label >{props.item} : </label>
+      <label>{props.item} : </label>
       {value}
     </div>
   );

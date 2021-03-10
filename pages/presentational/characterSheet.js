@@ -71,7 +71,7 @@ export function CharacterSheet() {
         header="Character Sheet"
         contents={contents}
         organization={organization}
-        onchangetracker={updateCharacterSheetOnChange}></SubtableContainer>
+        onchangelistener={updateCharacterSheetOnChange}></SubtableContainer>
 
       <div className={classes.buttonContainer}>
         <button
