@@ -107,7 +107,7 @@
     },
     "calculations": {
       "abilityScoreModifiers": {
-        "0": "TEST",
+        "0": "Invalid ability score",
         "1": -5,
         "2": -4,
         "3": -4,
