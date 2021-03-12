@@ -44,7 +44,7 @@ export function CharacterSheet() {
     alert("DELETING");
   };
   const updateCharacterSheetOnChange = () => {
-    console.log("test");
+    console.log("updateCharacterSheetOnChange test");
   };
   let contents = {};
   let organization = [];
@@ -55,7 +55,6 @@ export function CharacterSheet() {
   }
   let calculatedValues = data.characterSheet.calculatedValues;
   for (const key in calculatedValues.valueNames) {
-    //runs the calculation on calculated value, which isn't terribly accurate
     let calculationFunction = data.characterSheet.calculations[key];
     let func = eval(calculationFunction.func);
     let calculatedValuesAfterCalculation = func(data.characterSheet);
