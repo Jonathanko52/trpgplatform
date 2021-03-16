@@ -43,7 +43,8 @@ export function SubtableContainer(props) {
           <Subtable
             key={count}
             header={keys}
-            subtableitems={subtableItems}></Subtable>
+            subtableitems={subtableItems}
+            onchangelistener={onchangelistener}></Subtable>
         );
         count++;
       }
@@ -60,6 +61,7 @@ export function SubtableContainer(props) {
 }
 
 export function Subtable(props) {
+  let onchangelistener = props.onchangelistener;
   const classes = useStyles();
 
   let innerArray = [];
@@ -71,7 +73,11 @@ export function Subtable(props) {
     }
   });
   return (
-    <div className={classes.subTable}>
+    <div
+      className={classes.subTable}
+      onChange={() => {
+        onchangelistener;
+      }}>
       <h4 className={classes.subTableHeader}>{props.header}</h4>
       {innerArray}
     </div>
