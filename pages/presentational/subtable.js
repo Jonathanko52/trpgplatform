@@ -96,7 +96,7 @@ export function SubtableItem(props) {
     value = [value];
   }
   value = value.map((cur, ind) => {
-    return <input key={ind} type="text"></input>;
+    return <input key={ind} type="text" defaultValue={cur}></input>;
   });
 
   return (
