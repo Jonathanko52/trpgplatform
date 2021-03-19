@@ -43,8 +43,8 @@ export function CharacterSheet() {
   const deleteCharacterSheet = () => {
     alert("DELETING");
   };
-  const updateCharacterSheetOnChange = () => {
-    console.log("updateCharacterSheetOnChange test");
+  const updateCharacterSheetOnChange = (value) => {
+    console.log(value);
   };
   let contents = {};
   let organization = [];

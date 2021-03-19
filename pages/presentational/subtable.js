@@ -69,7 +69,14 @@ export function Subtable(props) {
     if (cur) {
       let item = cur[0];
       let value = cur[1];
-      innerArray.push(<SubtableItem key={index} item={item} value={value} />);
+      innerArray.push(
+        <SubtableItem
+          onchangelistener={onchangelistener}
+          key={index}
+          item={item}
+          value={value}
+        />
+      );
     }
   });
   return (
@@ -87,6 +94,7 @@ export function Subtable(props) {
 export function SubtableItem(props) {
   const classes = useStyles();
   let value = props.value;
+  let onchangelistener = props.onchangelistener;
   if (Array.isArray(value)) {
     value = value.reduce((acc, cur) => {
       acc.push(cur);
@@ -96,7 +104,15 @@ export function SubtableItem(props) {
     value = [value];
   }
   value = value.map((cur, ind) => {
-    return <input key={ind} type="text" defaultValue={cur}></input>;
+    return (
+      <input
+        onChange={(e) => {
+          onchangelistener(e.target.value);
+        }}
+        key={ind}
+        type="text"
+        defaultValue={cur}></input>
+    );
   });
 
   return (
