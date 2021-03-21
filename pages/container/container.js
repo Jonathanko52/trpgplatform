@@ -5,7 +5,7 @@ export const useStyles = createUseStyles({
   container: { border: "solid 1px" },
 });
 
-export function Sidebar(props) {
+export function Sidebar() {
   const classes = useStyles();
 
   return <div className={classes.container}>Container</div>;
