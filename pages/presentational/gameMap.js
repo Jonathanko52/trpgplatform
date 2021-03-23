@@ -8,7 +8,7 @@ export const useStyles = createUseStyles({
 export function GameMap() {
   const classes = useStyles();
 
-  return <div className={classes.gameMap}> Game Map</div>;
+  return <div className={classes.gameMap}> <h1>Game Map</h1>Game Map</div>;>
 }
 
 export default GameMap;
