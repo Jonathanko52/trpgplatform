@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { createUseStyles } from "react-jss";
 import data from "../../gameData/tables2.json";
 import SubtableContainer from "./subtable";
@@ -30,7 +30,9 @@ export const useStyles = createUseStyles({
 });
 
 export function CharacterSheet() {
-  const [characterDataset, setCharacterSheet] = useState({});
+  const [characterDatasheet, setCharacterSheet] = useState({});
+  const [contents, setContents] = useState({});
+  const [organization, setOrganization] = useState({});
   const classes = useStyles();
   const saveCharacterSheet = () => {
     alert("SAVING");
@@ -45,29 +47,31 @@ export function CharacterSheet() {
     alert("DELETING");
   };
   const updateCharacterSheetOnChange = (value) => {};
-  let contents = {};
-  let organization = [];
 
   useEffect(() => {
+    let contentsInner = {};
     setCharacterSheet(data.characterSheet);
+
+    let pageData = data.characterSheet.noncalculatedValues;
+    let additionalData = data.characterSheet.organization;
+    let calculatedValues = data.characterSheet.calculatedValues;
+
+    for (const key in pageData.valueNames) {
+      contentsInner[key] = [pageData.valueNames[key], pageData[key]];
+    }
+    for (const key in calculatedValues.valueNames) {
+      let calculationFunction = data.characterSheet.calculations[key];
+      let func = eval(calculationFunction.func);
+      let calculatedValuesAfterCalculation = func(data.characterSheet);
+      contentsInner[key] = [
+        calculatedValues.valueNames[key],
+        calculatedValuesAfterCalculation,
+      ];
+    }
+    setOrganization(additionalData);
+    setContents(contentsInner);
   });
 
-  let pageData = data.characterSheet.noncalculatedValues;
-  let additionalData = data.characterSheet.organization;
-  for (const key in pageData.valueNames) {
-    contents[key] = [pageData.valueNames[key], pageData[key]];
-  }
-  let calculatedValues = data.characterSheet.calculatedValues;
-  for (const key in calculatedValues.valueNames) {
-    let calculationFunction = data.characterSheet.calculations[key];
-    let func = eval(calculationFunction.func);
-    let calculatedValuesAfterCalculation = func(data.characterSheet);
-    contents[key] = [
-      calculatedValues.valueNames[key],
-      calculatedValuesAfterCalculation,
-    ];
-  }
-  organization = additionalData;
   return (
     <div className={classes.characterSheet}>
       <SubtableContainer
