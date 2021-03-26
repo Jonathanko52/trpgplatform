@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
 import data from "../../gameData/tables2.json";
 import SubtableContainer from "./subtable";
@@ -30,6 +30,7 @@ export const useStyles = createUseStyles({
 });
 
 export function CharacterSheet() {
+  const [characterDataset, setCharacterSheet] = useState({});
   const classes = useStyles();
   const saveCharacterSheet = () => {
     alert("SAVING");
@@ -43,11 +44,14 @@ export function CharacterSheet() {
   const deleteCharacterSheet = () => {
     alert("DELETING");
   };
-  const updateCharacterSheetOnChange = (value) => {
-    console.log(value);
-  };
+  const updateCharacterSheetOnChange = (value) => {};
   let contents = {};
   let organization = [];
+
+  useEffect(() => {
+    setCharacterSheet(data.characterSheet);
+  });
+
   let pageData = data.characterSheet.noncalculatedValues;
   let additionalData = data.characterSheet.organization;
   for (const key in pageData.valueNames) {
