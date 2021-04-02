@@ -50,7 +50,6 @@ export function CharacterSheet() {
 
   useEffect(() => {
     let contentsInner = {};
-    setCharacterSheet(data.characterSheet);
 
     //Using Local Data
     let pageData = data.characterSheet.noncalculatedValues;
@@ -61,6 +60,9 @@ export function CharacterSheet() {
     // let pageData = characterDatasheet.noncalculatedValues;
     // let additionalData = characterDatasheet.organization;
     // let calculatedValues = characterDatasheet.calculatedValues;
+    setCharacterSheet(data.characterSheet);
+
+    console.log("CHARACTEr DATASHEET", characterDatasheet);
 
     for (const key in pageData.valueNames) {
       contentsInner[key] = [pageData.valueNames[key], pageData[key]];
