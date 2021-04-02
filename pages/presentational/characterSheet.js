@@ -52,9 +52,15 @@ export function CharacterSheet() {
     let contentsInner = {};
     setCharacterSheet(data.characterSheet);
 
+    //Using Local Data
     let pageData = data.characterSheet.noncalculatedValues;
     let additionalData = data.characterSheet.organization;
     let calculatedValues = data.characterSheet.calculatedValues;
+
+    //Using state item
+    // let pageData = characterDatasheet.noncalculatedValues;
+    // let additionalData = characterDatasheet.organization;
+    // let calculatedValues = characterDatasheet.calculatedValues;
 
     for (const key in pageData.valueNames) {
       contentsInner[key] = [pageData.valueNames[key], pageData[key]];
@@ -116,7 +122,6 @@ export function CharacterSheet() {
             let confirm = window.confirm(
               "Are you sure you want to delete your character?"
             );
-
             if (confirm) {
               deleteCharacterSheet();
             } else {
