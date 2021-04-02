@@ -52,18 +52,19 @@ export function CharacterSheet() {
     let contentsInner = {};
 
     //Using Local Data
-    let pageData = data.characterSheet.noncalculatedValues;
-    let additionalData = data.characterSheet.organization;
-    let calculatedValues = data.characterSheet.calculatedValues;
+    let pageData;
+    let additionalData;
+    let calculatedValues;
 
     //Using state item
 
     setCharacterSheet(data.characterSheet);
+
     console.log(characterDatasheet);
     if (characterDatasheet["noncalculatedValues"]) {
-      let pageData = characterDatasheet.noncalculatedValues;
-      let additionalData = characterDatasheet.organization;
-      let calculatedValues = characterDatasheet.calculatedValues;
+      pageData = characterDatasheet.noncalculatedValues;
+      additionalData = characterDatasheet.organization;
+      calculatedValues = characterDatasheet.calculatedValues;
       for (const key in pageData.valueNames) {
         contentsInner[key] = [pageData.valueNames[key], pageData[key]];
       }
@@ -76,10 +77,9 @@ export function CharacterSheet() {
           calculatedValuesAfterCalculation,
         ];
       }
-
-      setOrganization(additionalData);
-      setContents(contentsInner);
     }
+    setOrganization(additionalData);
+    setContents(contentsInner);
   });
 
   return (
