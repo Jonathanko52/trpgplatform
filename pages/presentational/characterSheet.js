@@ -57,27 +57,29 @@ export function CharacterSheet() {
     let calculatedValues = data.characterSheet.calculatedValues;
 
     //Using state item
-    // let pageData = characterDatasheet.noncalculatedValues;
-    // let additionalData = characterDatasheet.organization;
-    // let calculatedValues = characterDatasheet.calculatedValues;
+
     setCharacterSheet(data.characterSheet);
+    console.log(characterDatasheet);
+    if (characterDatasheet["noncalculatedValues"]) {
+      let pageData = characterDatasheet.noncalculatedValues;
+      let additionalData = characterDatasheet.organization;
+      let calculatedValues = characterDatasheet.calculatedValues;
+      for (const key in pageData.valueNames) {
+        contentsInner[key] = [pageData.valueNames[key], pageData[key]];
+      }
+      for (const key in calculatedValues.valueNames) {
+        let calculationFunction = data.characterSheet.calculations[key];
+        let func = eval(calculationFunction.func);
+        let calculatedValuesAfterCalculation = func(data.characterSheet);
+        contentsInner[key] = [
+          calculatedValues.valueNames[key],
+          calculatedValuesAfterCalculation,
+        ];
+      }
 
-    console.log("CHARACTEr DATASHEET", characterDatasheet);
-
-    for (const key in pageData.valueNames) {
-      contentsInner[key] = [pageData.valueNames[key], pageData[key]];
+      setOrganization(additionalData);
+      setContents(contentsInner);
     }
-    for (const key in calculatedValues.valueNames) {
-      let calculationFunction = data.characterSheet.calculations[key];
-      let func = eval(calculationFunction.func);
-      let calculatedValuesAfterCalculation = func(data.characterSheet);
-      contentsInner[key] = [
-        calculatedValues.valueNames[key],
-        calculatedValuesAfterCalculation,
-      ];
-    }
-    setOrganization(additionalData);
-    setContents(contentsInner);
   });
 
   return (
