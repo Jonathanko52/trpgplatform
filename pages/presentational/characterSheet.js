@@ -51,12 +51,9 @@ export function CharacterSheet() {
   useEffect(() => {
     let contentsInner = {};
 
-    //Using Local Data
     let pageData;
     let additionalData;
     let calculatedValues;
-
-    //Using state item
 
     setCharacterSheet(data.characterSheet);
 
