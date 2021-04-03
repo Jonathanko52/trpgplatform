@@ -48,9 +48,7 @@ export function CharacterSheet() {
     alert("DELETING");
   };
   const updateCharacterSheetOnChange = (value) => {};
-  const processCharacterSheetDataIntoSheet = () => {};
-
-  useEffect(() => {
+  const processCharacterSheetDataInto = () => {
     let contentsInner = {};
 
     let pageData;
@@ -78,6 +76,10 @@ export function CharacterSheet() {
     }
     setOrganization(additionalData);
     setContents(contentsInner);
+  };
+
+  useEffect(() => {
+    processCharacterSheetDataInto();
   });
 
   return (
