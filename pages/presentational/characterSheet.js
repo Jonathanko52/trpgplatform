@@ -39,6 +39,7 @@ export function CharacterSheet() {
   };
   const loadCharacterSheet = () => {
     alert("LOADING");
+    setCharacterSheet(data);
   };
   const clearCharacterSheet = () => {
     alert("CLEARING");
@@ -47,6 +48,7 @@ export function CharacterSheet() {
     alert("DELETING");
   };
   const updateCharacterSheetOnChange = (value) => {};
+  const convertDataToCharacterSheet = () => {};
 
   useEffect(() => {
     let contentsInner = {};
