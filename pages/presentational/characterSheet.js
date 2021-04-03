@@ -48,7 +48,7 @@ export function CharacterSheet() {
     alert("DELETING");
   };
   const updateCharacterSheetOnChange = (value) => {};
-  const convertDataToCharacterSheet = () => {};
+  const processCharacterSheetDataIntoSheet = () => {};
 
   useEffect(() => {
     let contentsInner = {};
