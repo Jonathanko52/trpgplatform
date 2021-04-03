@@ -57,7 +57,6 @@ export function CharacterSheet() {
 
     setCharacterSheet(data.characterSheet);
 
-    console.log(characterDatasheet);
     if (characterDatasheet["noncalculatedValues"]) {
       pageData = characterDatasheet.noncalculatedValues;
       additionalData = characterDatasheet.organization;
