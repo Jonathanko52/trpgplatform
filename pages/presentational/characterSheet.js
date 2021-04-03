@@ -97,7 +97,7 @@ export function CharacterSheet() {
             if (confirm) {
               saveCharacterSheet();
             } else {
-              alert("load canceled");
+              alert("savecanceled");
             }
           }}>
           Save
