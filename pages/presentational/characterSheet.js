@@ -55,8 +55,6 @@ export function CharacterSheet() {
     let additionalData;
     let calculatedValues;
 
-    setCharacterSheet(data.characterSheet);
-
     if (characterDatasheet["noncalculatedValues"]) {
       pageData = characterDatasheet.noncalculatedValues;
       additionalData = characterDatasheet.organization;
@@ -74,14 +72,14 @@ export function CharacterSheet() {
         ];
       }
     }
+    setCharacterSheet(data.characterSheet);
     setOrganization(additionalData);
-
     setContents(contentsInner);
   };
 
   useEffect(() => {
     processCharacterSheetDataInto();
-  });
+  }, []);
 
   return (
     <div className={classes.characterSheet}>
