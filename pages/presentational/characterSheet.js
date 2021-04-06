@@ -48,17 +48,12 @@ export function CharacterSheet() {
     alert("DELETING");
   };
   const updateCharacterSheetOnChange = (value) => {};
-  const processCharacterSheetDataInto = () => {};
-
-  useEffect(() => {
-    // processCharacterSheetDataInto();
+  const processCharacterSheetDataInto = () => {
     let contentsInner = {};
 
     let pageData;
     let additionalData;
     let calculatedValues;
-
-    setCharacterSheet(data.characterSheet);
 
     if (characterDatasheet["noncalculatedValues"]) {
       pageData = characterDatasheet.noncalculatedValues;
@@ -77,8 +72,14 @@ export function CharacterSheet() {
         ];
       }
     }
+
+    setCharacterSheet(data.characterSheet);
     setOrganization(additionalData);
     setContents(contentsInner);
+  };
+
+  React.useEffect(() => {
+    processCharacterSheetDataInto();
   });
 
   return (
