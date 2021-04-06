@@ -34,8 +34,6 @@ export function CharacterSheet() {
   const [contents, setContents] = useState({});
   const [organization, setOrganization] = useState({});
   const classes = useStyles();
-  let contentsInner = {};
-
   const saveCharacterSheet = () => {
     alert("SAVING");
   };
@@ -50,10 +48,17 @@ export function CharacterSheet() {
     alert("DELETING");
   };
   const updateCharacterSheetOnChange = (value) => {};
-  const processCharacterSheetDataInto = () => {
+  const processCharacterSheetDataInto = () => {};
+
+  useEffect(() => {
+    // processCharacterSheetDataInto();
+    let contentsInner = {};
+
     let pageData;
     let additionalData;
     let calculatedValues;
+
+    setCharacterSheet(data.characterSheet);
 
     if (characterDatasheet["noncalculatedValues"]) {
       pageData = characterDatasheet.noncalculatedValues;
@@ -72,21 +77,16 @@ export function CharacterSheet() {
         ];
       }
     }
-    setCharacterSheet(data.characterSheet);
     setOrganization(additionalData);
     setContents(contentsInner);
-  };
-
-  useEffect(() => {
-    processCharacterSheetDataInto();
-  }, []);
+  });
 
   return (
     <div className={classes.characterSheet}>
       <SubtableContainer
         header="Character Sheet"
-        contents={contentsInner}
-        organization={additionalData}
+        contents={contents}
+        organization={organization}
         onchangelistener={updateCharacterSheetOnChange}></SubtableContainer>
 
       <div className={classes.buttonContainer}>
