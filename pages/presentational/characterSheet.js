@@ -74,7 +74,7 @@ export function CharacterSheet() {
         ];
       }
     }
-    // setOrganization(additionalData);
+    setOrganization(additionalData);
     // setContents(contentsInner);
   };
 
