@@ -73,12 +73,12 @@ export function CharacterSheet() {
       }
     }
 
-    setCharacterSheet(data.characterSheet);
-    setOrganization(additionalData);
-    setContents(contentsInner);
+    // setCharacterSheet(data.characterSheet);
+    // setOrganization(additionalData);
+    // setContents(contentsInner);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     processCharacterSheetDataInto();
   });
 
