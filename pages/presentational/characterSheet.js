@@ -50,7 +50,6 @@ export function CharacterSheet() {
   const updateCharacterSheetOnChange = (value) => {};
   const processCharacterSheetDataInto = () => {
     let contentsInner = {};
-
     let pageData;
     let additionalData;
     let calculatedValues;
