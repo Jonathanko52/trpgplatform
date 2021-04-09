@@ -78,10 +78,8 @@ export function CharacterSheet() {
 
   useEffect(() => {
     setCharacterSheet(data);
-    console.log(data);
-    console.log(characterDatasheet);
     processCharacterSheetData();
-  }, []);
+  });
 
   return (
     <div className={classes.characterSheet}>
@@ -95,15 +93,16 @@ export function CharacterSheet() {
         <button
           className={classes.characterSheetButtons}
           onClick={() => {
-            let confirm = window.confirm(
-              "Are you sure you want to save your character?"
-            );
+            // let confirm = window.confirm(
+            //   "Are you sure you want to save your character?"
+            // );
 
-            if (confirm) {
-              saveCharacterSheet();
-            } else {
-              alert("savecanceled");
-            }
+            // if (confirm) {
+            //   saveCharacterSheet();
+            // } else {
+            //   alert("savecanceled");
+            // }
+            console.log(characterDatasheet);
           }}>
           Save
         </button>
