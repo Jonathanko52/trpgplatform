@@ -34,6 +34,7 @@ export function CharacterSheet() {
   const [contents, setContents] = useState({});
   const [organization, setOrganization] = useState({});
   const classes = useStyles();
+
   const saveCharacterSheet = () => {
     alert("SAVING");
   };
@@ -79,7 +80,7 @@ export function CharacterSheet() {
 
   useEffect(() => {
     processCharacterSheetDataInto();
-  });
+  }, []);
 
   return (
     <div className={classes.characterSheet}>
