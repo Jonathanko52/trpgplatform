@@ -49,12 +49,11 @@ export function CharacterSheet() {
     alert("DELETING");
   };
   const updateCharacterSheetOnChange = (value) => {};
-  const processCharacterSheetDataInto = () => {
+  const processCharacterSheetData = () => {
     let contentsInner = {};
     let pageData;
     let additionalData;
     let calculatedValues;
-
     if (characterDatasheet["noncalculatedValues"]) {
       pageData = characterDatasheet.noncalculatedValues;
       additionalData = characterDatasheet.organization;
@@ -72,14 +71,16 @@ export function CharacterSheet() {
         ];
       }
     }
-
-    // setCharacterSheet(data.characterSheet);
-    // setOrganization(additionalData);
-    // setContents(contentsInner);
+    setContents(contentsInner);
+    setCharacterSheet(data.characterSheet);
+    setOrganization(additionalData);
   };
 
   useEffect(() => {
-    processCharacterSheetDataInto();
+    setCharacterSheet(data);
+    console.log(data);
+    console.log(characterDatasheet);
+    processCharacterSheetData();
   }, []);
 
   return (
