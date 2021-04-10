@@ -37,10 +37,11 @@ export function CharacterSheet() {
 
   const saveCharacterSheet = () => {
     alert("SAVING");
+    setCharacterSheet(data);
+    processCharacterSheetData();
   };
   const loadCharacterSheet = () => {
     alert("LOADING");
-    setCharacterSheet(data);
   };
   const clearCharacterSheet = () => {
     alert("CLEARING");
@@ -76,10 +77,7 @@ export function CharacterSheet() {
     setOrganization(additionalData);
   };
 
-  useEffect(() => {
-    setCharacterSheet(data);
-    processCharacterSheetData();
-  });
+  useEffect(() => {});
 
   return (
     <div className={classes.characterSheet}>
