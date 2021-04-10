@@ -39,7 +39,6 @@ export function CharacterSheet() {
     alert("SAVING");
     setCharacterSheet(data);
     processCharacterSheetData();
-    console.log("SHEET DATA", characterDatasheet);
   };
   const loadCharacterSheet = () => {
     alert("LOADING");

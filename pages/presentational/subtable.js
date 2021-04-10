@@ -62,7 +62,7 @@ export function SubtableContainer(props) {
   };
 
   //Why is it working here?
-  // subtableContentSort();
+  subtableContentSort();
 
   return (
     <div className={classes.subTableContainer}>
