@@ -38,6 +38,8 @@ export function SubtableContainer(props) {
     setContents(props.contents);
     setOrganization(props.organization);
     subtableContentSort();
+    console.log("Contents", contents);
+    console.log("Organization", organization);
   });
 
   const subtableContentSort = () => {

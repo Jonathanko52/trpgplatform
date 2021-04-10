@@ -80,8 +80,6 @@ export function CharacterSheet() {
     console.log("Character Data Sheet", characterDatasheet);
   };
 
-  useEffect(() => {});
-
   return (
     <div className={classes.characterSheet}>
       <SubtableContainer
@@ -94,7 +92,7 @@ export function CharacterSheet() {
         <button
           className={classes.characterSheetButtons}
           onClick={() => {
-            processCharacterSheetData();
+            saveCharacterSheet();
           }}>
           Save
         </button>
