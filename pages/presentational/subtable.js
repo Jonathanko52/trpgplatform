@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
@@ -26,18 +26,27 @@ export const useStyles = createUseStyles({
 });
 
 export function SubtableContainer(props) {
-  let organization = props.organization;
   let onchangelistener = props.onchangelistener;
-  let content = props.contents;
+
+  const [organization, setOrganization] = useState({});
+  const [contents, setContents] = useState({});
+
   const classes = useStyles();
   let array = [];
+
+  useEffect(() => {
+    setContents(props.contents);
+    setOrganization(props.organization);
+    subtableContentSort();
+  });
+
   const subtableContentSort = () => {
-    if (props.organization) {
+    if (organization) {
       let count = 0;
       for (const keys in organization) {
         let subtableItems = [];
         organization[keys].forEach((cur) => {
-          subtableItems.push(content[cur]);
+          subtableItems.push(contents[cur]);
         });
         array.push(
           <Subtable
