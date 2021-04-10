@@ -35,6 +35,7 @@ export function SubtableContainer(props) {
   let array = [];
 
   const subtableContentSort = () => {
+    console.log("org", organization);
     if (organization) {
       let count = 0;
       for (const keys in organization) {
