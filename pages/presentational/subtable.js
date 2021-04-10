@@ -41,6 +41,7 @@ export function SubtableContainer(props) {
   });
 
   const subtableContentSort = () => {
+    console.log("FIRING SUBTABLE CONTENT SORT");
     if (organization) {
       let count = 0;
       for (const keys in organization) {
@@ -59,7 +60,9 @@ export function SubtableContainer(props) {
       }
     }
   };
-  subtableContentSort();
+
+  //Why is it working here?
+  // subtableContentSort();
 
   return (
     <div className={classes.subTableContainer}>
