@@ -51,6 +51,7 @@ export function CharacterSheet() {
   };
   const updateCharacterSheetOnChange = (value) => {};
   const processCharacterSheetData = () => {
+    console.log("PROCESSING");
     let contentsInner = {};
     let pageData;
     let additionalData;
@@ -75,6 +76,8 @@ export function CharacterSheet() {
     setContents(contentsInner);
     setCharacterSheet(data.characterSheet);
     setOrganization(additionalData);
+    console.log("Contents", contents);
+    console.log("Character Data Sheet", characterDatasheet);
   };
 
   useEffect(() => {});
@@ -91,16 +94,7 @@ export function CharacterSheet() {
         <button
           className={classes.characterSheetButtons}
           onClick={() => {
-            // let confirm = window.confirm(
-            //   "Are you sure you want to save your character?"
-            // );
-
-            // if (confirm) {
-            //   saveCharacterSheet();
-            // } else {
-            //   alert("savecanceled");
-            // }
-            console.log(characterDatasheet);
+            processCharacterSheetData();
           }}>
           Save
         </button>
