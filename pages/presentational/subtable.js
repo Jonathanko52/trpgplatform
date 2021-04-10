@@ -41,7 +41,7 @@ export function SubtableContainer(props) {
   });
 
   const subtableContentSort = () => {
-    console.log("FIRING SUBTABLE CONTENT SORT");
+    console.log("SUBTABLE");
     if (organization) {
       let count = 0;
       for (const keys in organization) {
