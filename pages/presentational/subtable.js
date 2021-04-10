@@ -37,6 +37,7 @@ export function SubtableContainer(props) {
   const subtableContentSort = () => {
     console.log("org", organization);
     if (organization) {
+      console.log("IF");
       let count = 0;
       for (const keys in organization) {
         let subtableItems = [];
@@ -53,11 +54,11 @@ export function SubtableContainer(props) {
         count++;
       }
     }
+    setContents(props.contents);
+    setOrganization(props.organization);
   };
 
   useEffect(() => {
-    setContents(props.contents);
-    setOrganization(props.organization);
     subtableContentSort();
   });
 
