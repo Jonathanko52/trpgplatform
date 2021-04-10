@@ -76,8 +76,6 @@ export function CharacterSheet() {
     setContents(contentsInner);
     setCharacterSheet(data.characterSheet);
     setOrganization(additionalData);
-    console.log("Contents", contents);
-    console.log("Character Data Sheet", characterDatasheet);
   };
 
   return (
