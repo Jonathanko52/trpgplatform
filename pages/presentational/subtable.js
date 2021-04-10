@@ -34,8 +34,13 @@ export function SubtableContainer(props) {
   const classes = useStyles();
   let array = [];
 
+  useEffect(() => {
+    setContents(props.contents);
+    setOrganization(props.organization);
+    subtableContentSort();
+  });
+
   const subtableContentSort = () => {
-    console.log("org", organization);
     if (organization) {
       let count = 0;
       for (const keys in organization) {
@@ -53,13 +58,8 @@ export function SubtableContainer(props) {
         count++;
       }
     }
-    setContents(props.contents);
-    setOrganization(props.organization);
   };
-
-  useEffect(() => {
-    subtableContentSort();
-  });
+  subtableContentSort();
 
   return (
     <div className={classes.subTableContainer}>
@@ -70,7 +70,6 @@ export function SubtableContainer(props) {
 }
 
 export function Subtable(props) {
-  console.log("PROPS", props);
   let onchangelistener = props.onchangelistener;
   const classes = useStyles();
 
